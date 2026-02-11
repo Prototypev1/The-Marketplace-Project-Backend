@@ -17,8 +17,8 @@ namespace Marketplace.Domain.Entities
         public UserRole Role { get; set; } = UserRole.RegularUser;
         public DateTime CreatedAt { get; private set; }
 
-        private User() { 
-        }
+        private User() { }
+        
         public User(string firstName, string lastName, string email, string passwordHash, UserRole userRole)
         {
             if(string.IsNullOrWhiteSpace(firstName)) throw new ArgumentException("First name cannot be empty.", nameof(firstName));
