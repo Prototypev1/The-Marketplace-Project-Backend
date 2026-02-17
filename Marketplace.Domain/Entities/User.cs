@@ -21,8 +21,8 @@ namespace Marketplace.Domain.Entities
         
         public User(string firstName, string lastName, string email, string passwordHash, UserRole userRole)
         {
-            if(string.IsNullOrWhiteSpace(firstName)) throw new ArgumentException("First name cannot be empty.", nameof(firstName));
-            if(string.IsNullOrWhiteSpace(lastName)) throw new ArgumentException("Last name cannot be empty.", nameof(lastName));
+            if(string.IsNullOrWhiteSpace(firstName)) throw new ArgumentException("First name cannot be empty.", nameof(firstName)); //check all the conditions, create a public validator
+            if(string.IsNullOrWhiteSpace(lastName)) throw new ArgumentException("Last name cannot be empty.", nameof(lastName)); //same goes for here and email and password etc
 
             Id = Guid.NewGuid();
             FirstName = firstName;
